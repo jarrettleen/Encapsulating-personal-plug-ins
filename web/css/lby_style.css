@@ -1,0 +1,24 @@
+.lby_index{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.lby_index li{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.lby_index li a{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-align: center;
+    border-radius: 20px;
+    background: #ffffff;
+    border:1px #333 solid;
+    color: #ff0000;
+    font-size: 16px;
+    display: block;
+
+}

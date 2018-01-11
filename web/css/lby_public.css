@@ -1,0 +1,365 @@
+@charset "utf-8";
+/**
+** 默认验格式清除开始
+**/
+/* CSS Document */
+/*init*/
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */ dl, dt, dd, ul, ol, li, /* list elements 列表元素 */ pre, /* text formatting elements 文本格式元素 */ fieldset, lengend, button, input, textarea, /* form elements 表单元素 */ th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+    font-weight:normal;
+}
+
+body{ line-height:1; }
+a{blr:expression(this.onFocus=this.close()); border:none;} /* 只支持IE，过多使用效率低 */
+
+/* 设置默认字体 */
+body, button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+    outline:none;/*input去背景蓝色边框*/
+}
+address, cite, dfn, em, var {
+    font-style: normal;
+} /* 将斜体扶正 */
+code, kbd, pre, samp, tt {
+    font-family: "Courier New", Courier, monospace;
+} /* 统一等宽字体 */
+small {
+    font-size: 12px;
+} /* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol {
+    list-style: none;
+}
+/* 重置文本格式元素 */
+a {
+    text-decoration: none;
+}
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+q:before, q:after {
+    content: '';
+}
+/* 重置表单元素 */
+legend {
+    color: #000;
+} /* for ie6 */
+fieldset, img {
+    border: none;
+} /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+    overflow-y: scroll;
+}
+/*清除float*/
+/* Clear Fix */
+.clearfix:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix {
+    display:inline-block;
+}
+/* Hide from IE Mac \*/
+.clearfix {
+    display:block;
+}
+.clearfix{ zoom:1;}
+/* End hide from IE Mac */
+/* end of clearfix */
+/*清除float_end*/
+/*init_end*/
+
+/**
+** 默认验格式清除结束
+**/
+
+/*公用选项卡内容开始*/
+
+.lby_tab{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.lby_tab ul{
+    margin-top: 10px;
+}
+
+.lby_tab ul li{
+    float: left;
+    margin: 0 10px;
+}
+
+.lby_tab ul li a{
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    color: #7ce6ff;
+    border:1px #ccc solid;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px rgba(0,0,0,.5);
+}
+
+.lby_tab ul li.active a{
+    color: #2529c2;
+    background: #ff9b97;
+}
+
+.lby_tab_bottom{
+    margin-top: 10px;
+}
+.lby_tab_bottom li{
+    display: none;
+}
+
+/*公用选项卡内容end*/
+
+/*公用模糊匹配内容开始*/
+
+
+
+.lby_matching{
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.lby_matching_input{
+    height: 35px;
+    line-height: 35px;
+    width: calc(100% - 35px);
+    padding: 0 20px;
+    outline: none;
+    font-size: 16px;
+    box-sizing:border-box;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 2px 3px 3px #ccc;
+    border:none;
+    float: left;
+}
+
+.lby_matching_input.false{
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    padding: 0 20px;
+    outline: none;
+    font-size: 16px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px #ccc;
+    border:none;
+    float: left;
+}
+
+.lby_matching_input_btn{
+    background: #27cc10;
+    width: 35px;
+    height: 35px;
+    display: block;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    float: left;
+    box-shadow: 2px 3px 3px #ccc;
+}
+
+.lby_matching_ul{
+    background: #fff;
+    box-sizing:border-box;
+    width: 100%;
+    font-size: 14px;
+    position: absolute;
+    top: 36px;
+    z-index: 99;
+}
+
+.lby_matching_ul li a{
+    box-sizing:border-box;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    color: #333333;
+    display: block;
+    width: 100%;
+}
+
+.lby_matching_ul li a:hover{
+    background: #69a8d2;
+    color: #ffffff;
+}
+
+/*公用模糊匹配内容end*/
+
+/*公用banner图开始*/
+
+.lby_banner{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 300px;
+}
+
+.lby_banner_nr{
+    height: 100%;
+    position: absolute;
+}
+
+.lby_banner_nr li{
+    width: 100%;
+    float: left;
+    height: 300px;
+}
+
+
+.lby_banner_nr.d3{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    transition:1s all ease;
+    transform-style: preserve-3d;
+    transform: perspective(800px) translateZ(-300px);
+
+}
+
+.lby_banner_nr.d3 li{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.lby_banner_nr.d3 li:nth-child(1){
+    transform: translateZ(300px);
+}
+.lby_banner_nr.d3 li:nth-child(2){
+    transform: rotateY(90deg) translateZ(300px);
+}
+.lby_banner_nr.d3 li:nth-child(3){
+    transform: translateZ(-300px);
+}
+.lby_banner_nr.d3 li:nth-child(4){
+    transform: rotateY(90deg) translateZ(-300px);
+}
+
+.lby_banner_nr li a{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.lby_cir{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+}
+
+.lby_cir li{
+    margin-left: 5px;
+    float: left;
+}
+
+.lby_cir li a{
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 15px;
+    background:radial-gradient(#fff 1%, #f00 80%, #890524 20%);
+    float: left;
+}
+
+.lby_cir li.active a{
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 15px;
+    background:radial-gradient(#fff 1%, #f00 60%,#890524 40%);
+}
+
+.lby_cir li a:hover{
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 15px;
+    background:radial-gradient(#fff 1%, #f00 60%,#890524 40%);
+}
+
+.lby_cir.rectangle li{
+    margin-left: 5px;
+    float: left;
+}
+
+.lby_cir.rectangle li a{
+    width: 55px;
+    height: 5px;
+    display: block;
+    background:#fff;
+    float: left;
+}
+
+.lby_cir.rectangle li.active a{
+    width: 55px;
+    height: 5px;
+    display: block;
+    background:#f00;
+}
+
+.lby_cir.rectangle li a:hover{
+    width: 55px;
+    height: 5px;
+    display: block;
+    background: #f00;
+}
+
+.lby_prev{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: #ffffff;
+    background: rgba(0,0,0,0.5);
+    margin-top:-25px;
+    z-index: 9;
+}
+
+.lby_next{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: #ffffff;
+    background: rgba(0,0,0,0.5);
+    margin-top:-25px;
+    z-index: 9;
+}
+
+/*公用banner图end*/

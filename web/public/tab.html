@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <link rel="stylesheet" href="../css/lby_public.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/lby_public.js"></script>
+    <script>
+        lby.tools.ready(function () {
+            lby.app.tab({
+                Name:'.lby_tab',
+                Btn:'.lby_tab_btn',
+                AdClass:'active',
+                Tab:'.lby_tab_bottom',
+//                Text:['111','222','333']
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="lby_tab">
+        <ul class="lby_tab_bottom">
+            <li style="display: block;">
+                <div class="">1111</div>
+            </li>
+            <li>
+                <div class="">222</div>
+            </li>
+            <li>
+                <div class="">333</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

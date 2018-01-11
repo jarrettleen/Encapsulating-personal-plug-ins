@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="../css/lby_public.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/lby_public.js"></script>
+    <script>
+        lby.tools.ready(function () {
+            lby.app.banner({
+                "Name":'.banner',   //Name为想做轮播图的dom,数据类型为string,需传元素名称 class 或 id
+                "Air": true,            //Air为轮播默认下面的点显示隐藏,数据类型为boolean  默认为false  可选为  true   false
+                "Arrow":'hide',         //参数为  true  显示   false   隐藏   hide   已入显示  移出隐藏
+                "AirMode":'circular',   //AirMode为轮播默认点的显示方式有两种   1.圆点    2.长方形     默认为圆形    可传参数    circular    rectangle
+                "Face":'left',        //Face为轮播图的默认轮播方向  数据类型为string,需传  Left  Right  Bottom  Top
+                "Timer":1500,           //Timer为轮播动画的时间  1000为一秒   数据类型为number
+                "Vision":'3d'           //Vision为轮播的默认视觉  数据类型为string  可选参数  默认2d  参数为2d  3d  倾斜 tilt
+            })
+        })
+    </script>
+</head>
+<body>
+<div style="width: 600px;height: 600px;">
+    <div class="banner">
+        <ul class="lby_banner_nr">
+            <li><a style="background:url('../images/lby_grz/lby_box1.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box2.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box3.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box4.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box5.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box6.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box7.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box8.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box9.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+            <li><a style="background:url('../images/lby_grz/lby_box10.png');background-size: 100% 100%;" href="javascript:;"></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

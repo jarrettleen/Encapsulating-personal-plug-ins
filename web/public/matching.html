@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模糊匹配</title>
+    <link rel="stylesheet" href="../css/lby_public.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/lby_public.js"></script>
+    <script>
+        lby.tools.ready(function () {
+            var arr = ['1111','22222','333333','444444','555555','666666','77777','11','111','1','111哈哈'];
+            lby.app.matching({
+                Name:'.matching1',
+                Arr:arr
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="lby_matching matching1"></div>
+</body>
+</html>
